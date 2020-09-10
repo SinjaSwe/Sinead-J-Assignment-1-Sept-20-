@@ -9,65 +9,71 @@ namespace Sinead_J_Assignment_1__Sept_20_
         {
             Console.WriteLine("Welcome to the world's best calculator!");
 
-            char opSelected;
-            double numberOne;
-            double numberTwo;
-            double result;
-
             // create menu page
 
-            /*
             bool runMenu = true;
             do
+
             {
                 Console.Clear();
-                Console.Write("----menu----\nEnter Calculate to run the calculator.\nEnter Quit to exit program.\nSelection: ");
+                Console.Write("----menu----\nEnter Calculate to run the calculator.\nEnter quit to exit the program.\nSelection: ");
 
-                double userInput = Console.ReadLine();
+
+                string userInput = Console.ReadLine();
+
+                char opSelected;
+                double numberOne;
+                double numberTwo;
+                //double result;
+
 
                 switch (userInput)
-
-                    case "Loop":
-                    Loops();
-                    break;
-
-                case "quit":
-                    runMenu = false;
-                    break;
-
-                default:
-                    Console.WriteLine("This is not a valid input.");
-                    break;
-
-            }
-                Console.WriteLine("press a key to continue.");
-                Console.ReadLine();
-
-        } while (runMenu);*/
-
-
-
-            // create method to capture double 1 and 2 and operator      
-
-            Console.Write("Please enter first number: ");
-            numberOne = Convert.ToDouble(Console.ReadLine());
-            
-            Console.Write("Please enter a second number: ");
-            numberTwo = Convert.ToDouble(Console.ReadLine());
-            
-            Console.Write("Select maths operator (+, -, *, /): ");
-            opSelected = (char)Console.Read();
-
-             
-            // create switch calculator 
-
-                switch (opSelected)
                 {
-             
+
+                    case "Calculate":
+                        Console.Write("Please enter first number: ");
+                        numberOne = Convert.ToDouble(Console.ReadLine());
+
+                        Console.Write("Please enter a second number: ");
+                        numberTwo = Convert.ToDouble(Console.ReadLine());
+
+                        Console.Write("Select maths operator (+, -, *, /): ");
+                        opSelected = (char)Console.Read();
+                        break;        
+  
+                    case "quit":
+                        runMenu = false;
+                        break;
+
+                    default:
+                        Console.WriteLine("not a valid input.");
+                        break;
+
+                }
+
+                Console.Write("press a key to continue.");
+                Console.ReadKey();
+
+            } while (runMenu);
+
+            /*static void Calculates()
+            {
+                for (int i = 0; i < 1; i++)
+                { 
+                    Console.WriteLine(i);
+                }  
+            
+            } 
+           
+           // Switch calculator 
+
+            switch (opSelected)
+            {
+
                 case '+':
                     result = comAddition(numberOne, numberTwo);
                     Console.WriteLine("Your answer is: " + result);
-                     break;
+                    break;
 
                 case '-':
                     result = comSubtraction(numberOne, numberTwo);
@@ -83,11 +89,16 @@ namespace Sinead_J_Assignment_1__Sept_20_
                     result = comDivide(numberOne, numberTwo);
                     Console.WriteLine("Your answer is:" + result);
                     break;
-                    
 
-                    /*default*/
+                default:
+                    Console.WriteLine("not a valid input.");
+                    break;
 
             }
+            Console.WriteLine("press a key to conntine.");
+            Console.ReadKey();
+
+       
 
             // method for addition
 
@@ -125,6 +136,8 @@ namespace Sinead_J_Assignment_1__Sept_20_
                 double division = numberOne / numberTwo;
 
                 return division;
+
+            ADD 
                 }
 
 
@@ -133,51 +146,58 @@ namespace Sinead_J_Assignment_1__Sept_20_
             }
 
 
+            */
 
 
 
 
 
+            /*
+            bool runMenu = true;
+            do  
 
-                        /*
-                        bool runMenu = true;
-                        do  
+            {//menu 
 
-                        {//menu 
+                Console.Clear();
+                Console.Write("----menu----\nEnter calculate to start the calculator.\nEnter quit to exit the program.\nSelection: ");
 
-                            Console.Clear();
-                            Console.Write("----menu----\nEnter calculate to start the calculator.\nEnter quit to exit the program.\nSelection: ");
+                string userInput = Console.ReadLine();
 
-                            string userInput = Console.ReadLine();
+                switch (userInput)
+                {
+                    case "calculate":
+                        Loops();
+                        break;
 
-                            switch (userInput)
-                            {
-                                case "calculate":
-                                    Loops();
-                                    break;
+                    case "quit":
+                        runMenu = false;
+                        break;
 
-                                case "quit":
-                                    runMenu = false;
-                                    break;
+                    default:
+                        Console.WriteLine("not a valid input)");
+                        break;
 
-                                default:
-                                    Console.WriteLine("not a valid input)");
-                                    break;
+                }
 
-                            }
+                Console.WriteLine("Press a key to continue");
+                Console.ReadKey();
 
-                            Console.WriteLine("Press a key to continue");
-                            Console.ReadKey();
+            } while (runMenu);
 
-                        } while (runMenu);
-
-                            */
-
+                */
 
 
-                    }
+
         }
- 
+
+    }
+
+}
+
+
+
+
+
 
 
 
