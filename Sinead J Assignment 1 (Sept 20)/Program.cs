@@ -16,6 +16,37 @@ namespace Sinead_J_Assignment_1__Sept_20_
 
             // create menu page
 
+            /*
+            bool runMenu = true;
+            do
+            {
+                Console.Clear();
+                Console.Write("----menu----\nEnter Calculate to run the calculator.\nEnter Quit to exit program.\nSelection: ");
+
+                double userInput = Console.ReadLine();
+
+                switch (userInput)
+
+                    case "Loop":
+                    Loops();
+                    break;
+
+                case "quit":
+                    runMenu = false;
+                    break;
+
+                default:
+                    Console.WriteLine("This is not a valid input.");
+                    break;
+
+            }
+                Console.WriteLine("press a key to continue.");
+                Console.ReadLine();
+
+        } while (runMenu);*/
+
+
+
             // create method to capture double 1 and 2 and operator      
 
             Console.Write("Please enter first number: ");
@@ -34,57 +65,75 @@ namespace Sinead_J_Assignment_1__Sept_20_
                 {
              
                 case '+':
-                    result = numberOne + numberTwo;
+                    result = comAddition(numberOne, numberTwo);
                     Console.WriteLine("Your answer is: " + result);
                      break;
 
+                case '-':
+                    result = comSubtraction(numberOne, numberTwo);
+                    Console.WriteLine("Your answer is: " + result);
+                    break;
 
+                case '*':
+                    result = comMultiply(numberOne, numberTwo);
+                    Console.WriteLine("Your answer is:" + result);
+                    break;
 
-            // create method - how to add method to my case?
+                case '/':
+                    result = comDivide(numberOne, numberTwo);
+                    Console.WriteLine("Your answer is:" + result);
+                    break;
+                    
 
-                    static double comAddition (double numberOne, double numberTwo)
+                    /*default*/
+
+            }
+
+            // method for addition
+
+            static double comAddition (double numberOne, double numberTwo)
                     {
                         double addition = numberOne + numberTwo;
 
                         return addition;
 
+                     }
 
-                        }
+            // method for subtraction
 
-                        /* case '-':
-                            result = completeSubtraction;
-                            break;
+            static double comSubtraction (double numberOne, double numberTwo)
+                {
+                double subtraction = numberOne - numberTwo;
 
-
-                           case '*':
-                            Result: numberOne* numberTwo;
-                                break;
-
-
-                            case '/':
-                            Result: numberOne / numberTwo;
-                                break;
-
-                            default
-
+                return subtraction;
                 }
 
-                // create method for each calculation
 
-                static double completeAddition(double numberOne, double numberTwo)
-                    {
-                        double addition = numberOne + numberTwo;
+            //method for multiplication
 
-                        return addition;
-                    }
+            static double comMultiply (double numberOne, double numberTwo)
+                {
+                double multiplication = numberOne * numberTwo;
 
-                    static double completeSubtraction(double numberOne, double numberTwo)
-                    {
-                        double subtraction = numberOne - numberTwo;
+                return multiplication;
+                }
 
-                        return subtraction;
-                    }
-    */
+            //method for division
+
+            static double comDivide (double numberOne, double numberTwo)
+                {
+                double division = numberOne / numberTwo;
+
+                return division;
+                }
+
+
+
+
+            }
+
+
+
 
 
 
@@ -128,8 +177,8 @@ namespace Sinead_J_Assignment_1__Sept_20_
 
                     }
         }
-    }
-}
+ 
+
 
 
 
